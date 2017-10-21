@@ -28,6 +28,8 @@ void addFirst(int value);
 void addLast(int value);
 int RemoveFirst();
 int RemoveLast();
+int getFirst();
+int getLast();
 
 };
 
@@ -75,11 +77,18 @@ int DoubleLinkedList:: Remove(node *Node){
 	predecessor->next = sucessor;
 	sucessor->prev = predecessor;
 	size--;
+
 	return Node->value;
+	delete Node;
 
 
 	}
-
+int DoubleLinkedList::getFirst(){
+	return header->next->value;
+}
+int DoubleLinkedList::getLast(){
+	return trailer->prev->value;
+}
 
 
 

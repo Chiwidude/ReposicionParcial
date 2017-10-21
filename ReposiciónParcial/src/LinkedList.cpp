@@ -4,11 +4,11 @@
  *  Created on: Oct 20, 2017
  *      Author: FRAN
  */
+
 struct node{
 	int value;
 	node *next;
 };
-
 class LinkedList {
 private:
 	node *head, *tail;
@@ -20,7 +20,11 @@ public:
 	void addFirst(int value);
 	int RemoveFirst();
 	int getsize();
+	int getFirst();
+	int getLast();
 };
+
+
 
 bool LinkedList:: isEmpty(){
 
@@ -68,4 +72,10 @@ int LinkedList::RemoveFirst(){
 }
 int LinkedList::getsize(){
 	return size;
+}
+int LinkedList::getFirst(){
+	return head->value;
+}
+int LinkedList::getLast(){
+	return tail->value;
 }
