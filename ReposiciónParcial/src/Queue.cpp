@@ -10,12 +10,12 @@
 namespace std {
 
 Queue::Queue() {
-	// TODO Auto-generated constructor stub
+
 
 }
 
 Queue::~Queue() {
-	// TODO Auto-generated destructor stub
+
 }
 
 } /* namespace std */

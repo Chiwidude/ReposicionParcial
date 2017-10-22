@@ -4,11 +4,11 @@
  *  Created on: Oct 21, 2017
  *      Author: FRAN
  */
-#include<Stack.cpp>
-#include<Queue.cpp>
+
 #ifndef LINKEDLIST_H_
 #define LINKEDLIST_H_
-
+#include<Stack.cpp>
+#include<Queue.cpp>
 namespace std {
 struct node{
 	int value;

@@ -13,8 +13,8 @@ namespace std {
 
 class QueueArray : public Queue {
 private:
-static int capacity = 1000;
-int data[];
+	static const int capacity = 1000;
+	int data[capacity];
 int f = 0;
 int sz = 0;
 int arraylength;
@@ -28,7 +28,7 @@ public:
 	int dequeue();
 
 	virtual ~QueueArray();
-	virtual ~QueueArray(int size);
+
 };
 
 } /* namespace std */

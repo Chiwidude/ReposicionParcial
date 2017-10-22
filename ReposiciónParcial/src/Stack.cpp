@@ -10,12 +10,11 @@
 namespace std {
 
 Stack::Stack() {
-	// TODO Auto-generated constructor stub
 
 }
 
 Stack::~Stack() {
-	// TODO Auto-generated destructor stub
+
 }
 
 } /* namespace std */

@@ -13,11 +13,12 @@ namespace std {
 
 class StackArray : public Stack {
 private:
-int data[];
+	static const int capacity = 1000;
+int data[capacity];
 
 public:
 
- int capacity = 1000;
+
 int t = -1;
 int size();
 bool isEmpty();
