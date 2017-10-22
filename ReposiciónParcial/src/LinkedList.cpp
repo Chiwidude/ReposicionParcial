@@ -59,7 +59,7 @@ int LinkedList::RemoveFirst(){
 	return result;
 }
 int LinkedList::getsize(){
-	return size;
+	return Size;
 }
 int LinkedList::getFirst(){
 	return head->value;

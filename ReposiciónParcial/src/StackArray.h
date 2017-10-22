@@ -17,7 +17,7 @@ int data[];
 
 public:
 
-static int capacity = 1000;
+ int capacity = 1000;
 int t = -1;
 int size();
 bool isEmpty();
@@ -27,7 +27,7 @@ int pop();
 	StackArray();
 	StackArray(int size);
 	virtual ~StackArray();
-	virtual ~StackArray(int size);
+
 };
 
 } /* namespace std */
