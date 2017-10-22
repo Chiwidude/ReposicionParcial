@@ -1,30 +1,13 @@
 /*
  * LinkedList.cpp
  *
- *  Created on: Oct 20, 2017
+ *  Created on: Oct 21, 2017
  *      Author: FRAN
  */
 
-struct node{
-	int value;
-	node *next;
-};
-class LinkedList {
-private:
-	node *head, *tail;
-	int size = 0;
-	bool isEmpty();
-public:
-	LinkedList();
-	void addLast(int value);
-	void addFirst(int value);
-	int RemoveFirst();
-	int getsize();
-	int getFirst();
-	int getLast();
-};
+#include "LinkedList.h"
 
-
+namespace std {
 
 bool LinkedList:: isEmpty(){
 
@@ -79,3 +62,10 @@ int LinkedList::getFirst(){
 int LinkedList::getLast(){
 	return tail->value;
 }
+
+
+LinkedList::~LinkedList() {
+	// TODO Auto-generated destructor stub
+}
+
+} /* namespace std */

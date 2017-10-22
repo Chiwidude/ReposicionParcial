@@ -1,39 +1,15 @@
 /*
  * DoubleLinkedList.cpp
  *
- *  Created on: Oct 20, 2017
+ *  Created on: Oct 21, 2017
  *      Author: FRAN
  */
-struct node {
-	int value;
-	node *prev;
-	node *next;
-};
 
-class DoubleLinkedList {
-private:
-	node *header, *trailer;
-	int size = 0;
-bool isEmpty(){
+#include "DoubleLinkedList.h"
 
-return size==0;
+namespace std {
 
-}
-void AddBetween(int val, node *predecessor,node *sucessor);
-int Remove(node *Node);
-public:
-	DoubleLinkedList();
-int getSize();
-void addFirst(int value);
-void addLast(int value);
-int RemoveFirst();
-int RemoveLast();
-int getFirst();
-int getLast();
-
-};
-
-	DoubleLinkedList::DoubleLinkedList() {
+DoubleLinkedList::DoubleLinkedList() {
 		header = new node;
 		trailer = new node;
 		header->next = trailer;
@@ -60,7 +36,7 @@ int DoubleLinkedList::RemoveLast(){
 	}
 	return Remove(trailer->prev);
 }
-void DoubleLinkedList:: AddBetween(int val, node *predecessor,node *sucessor){
+void DoubleLinkedList:: AddBetween(int val,  node *predecessor,  node *sucessor){
 	node *temp = new node;
 
 	temp->value = val;
@@ -90,5 +66,8 @@ int DoubleLinkedList::getLast(){
 	return trailer->prev->value;
 }
 
+DoubleLinkedList::~DoubleLinkedList() {
+	// TODO Auto-generated destructor stub
+}
 
-
+} /* namespace std */

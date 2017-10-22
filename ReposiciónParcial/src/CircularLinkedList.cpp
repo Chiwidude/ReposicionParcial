@@ -1,28 +1,15 @@
 /*
- * CircularList.cpp
+ * CircularLinkedList.cpp
  *
- *  Created on: Oct 20, 2017
+ *  Created on: Oct 21, 2017
  *      Author: FRAN
  */
 
-struct node {
-int value;
-node *next;
-};
-class CircularLinkedList{
-private:
-	node *tail;
-	int size =0;
-bool isEmpty();
-public:
-CircularLinkedList();
-int getsize();
-void rotate();
-void addFirst(int value);
-void addLast(int value);
-int removeFirst();
-};
-CircularLinkedList :: CircularLinkedList(){
+#include "CircularLinkedList.h"
+
+namespace std {
+
+CircularLinkedList:: CircularLinkedList(){
 	tail = 0;
 }
 bool CircularLinkedList:: isEmpty(){
@@ -70,3 +57,8 @@ int CircularLinkedList::removeFirst(){
 
 }
 
+CircularLinkedList::~CircularLinkedList() {
+	// TODO Auto-generated destructor stub
+}
+
+} /* namespace std */
