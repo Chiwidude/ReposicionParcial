@@ -4,10 +4,10 @@
  *  Created on: Oct 21, 2017
  *      Author: FRAN
  */
-
+#include<Stack.cpp>
 #ifndef STACKARRAY_H_
 #define STACKARRAY_H_
-#include<Stack.cpp>
+
 
 namespace std {
 

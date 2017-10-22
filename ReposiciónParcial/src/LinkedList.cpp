@@ -11,7 +11,7 @@ namespace std {
 
 bool LinkedList:: isEmpty(){
 
-			return size==0;
+			return Size==0;
 
 }
 LinkedList::LinkedList()
@@ -31,7 +31,7 @@ void LinkedList::addLast(int value) {
 		tail->next = temp;
 		tail = temp;
 	}
-	size++;
+	Size++;
 }
 void LinkedList::addFirst(int value){
 		node *temp = new node;
@@ -41,6 +41,7 @@ void LinkedList::addFirst(int value){
 		if(isEmpty()){
 			tail = head;
 		}
+		Size++;
 	}
 int LinkedList::RemoveFirst(){
 	if(isEmpty()) {
@@ -50,6 +51,10 @@ int LinkedList::RemoveFirst(){
 	node *temp = new node;
 	temp = head;
 	head = head->next;
+	Size--;
+	if(Size==0) {
+		tail = 0;
+	}
 	delete temp;
 	return result;
 }
@@ -62,8 +67,21 @@ int LinkedList::getFirst(){
 int LinkedList::getLast(){
 	return tail->value;
 }
-
-
+void LinkedList::push(int r) {
+	addFirst(r);
+}
+int LinkedList::pop() {
+	return RemoveFirst();
+}
+int LinkedList::top() {
+	return getFirst();
+}
+void LinkedList::enqueue(int x) {
+	addLast(x);
+}
+int LinkedList::dequeue() {
+	return RemoveFirst();
+}
 LinkedList::~LinkedList() {
 	// TODO Auto-generated destructor stub
 }

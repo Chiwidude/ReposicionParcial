@@ -13,7 +13,7 @@ namespace std {
 class Stack {
 public:
 	virtual int size();
-	virtual virtual bool isEmpty();
+	 virtual bool isEmpty();
 	virtual void push(int i);
 	virtual int top();
 	virtual int pop();

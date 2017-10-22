@@ -4,10 +4,10 @@
  *  Created on: Oct 21, 2017
  *      Author: FRAN
  */
-#include<Queue.h>
+
 #ifndef QUEUEARRAY_H_
 #define QUEUEARRAY_H_
-
+#include<Queue.cpp>
 
 namespace std {
 
