@@ -10,8 +10,8 @@
 namespace std {
 
 DoubleLinkedList::DoubleLinkedList() {
-		header = new node;
-		trailer = new node;
+		header = new Node;
+		trailer = new Node;
 		header->next = trailer;
 	}
 int DoubleLinkedList::getSize() {
@@ -36,8 +36,8 @@ int DoubleLinkedList::RemoveLast(){
 	}
 	return Remove(trailer->prev);
 }
-void DoubleLinkedList:: AddBetween(int val,  node *predecessor,  node *sucessor){
-	node *temp = new node;
+void DoubleLinkedList:: AddBetween(int val,  Node *predecessor,  Node *sucessor){
+	Node *temp = new Node;
 
 	temp->value = val;
 	temp->prev = predecessor;
@@ -47,15 +47,15 @@ void DoubleLinkedList:: AddBetween(int val,  node *predecessor,  node *sucessor)
 	size++;
 
 }
-int DoubleLinkedList:: Remove(node *Node){
-	node *predecessor = Node->prev;
-	node *sucessor = Node->next;
+int DoubleLinkedList:: Remove(Node *nnode){
+	Node *predecessor = nnode->prev;
+	Node *sucessor = nnode->next;
 	predecessor->next = sucessor;
 	sucessor->prev = predecessor;
 	size--;
 
-	return Node->value;
-	delete Node;
+	return nnode->value;
+	delete nnode;
 
 
 	}
@@ -65,7 +65,25 @@ int DoubleLinkedList::getFirst(){
 int DoubleLinkedList::getLast(){
 	return trailer->prev->value;
 }
+bool DoubleLinkedList::search(int x) {
+	char flag = 'F';
+	Node *current = new Node;
+	current = header;
+	while((current != 0) && (flag =='F')){
+		if(current->value == x){
+			flag = 'V';
 
+		}
+		current = current->next;
+
+	}
+	if(flag == 'V') {
+				return true;
+			}else {
+			return false;
+}
+
+}
 DoubleLinkedList::~DoubleLinkedList() {
 	// TODO Auto-generated destructor stub
 }

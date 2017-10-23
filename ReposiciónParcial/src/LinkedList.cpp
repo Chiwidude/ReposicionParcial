@@ -67,7 +67,21 @@ int LinkedList::getFirst(){
 int LinkedList::getLast(){
 	return tail->value;
 }
-
+void LinkedList::push(int i) {
+	addFirst(i);
+}
+int LinkedList::top() {
+	return getFirst();
+}
+int LinkedList::pop() {
+	return RemoveFirst();
+}
+void LinkedList::enqueue(int i) {
+	addLast(i);
+}
+int LinkedList::dequeue(){
+	return RemoveFirst();
+}
 LinkedList::~LinkedList() {
 	// TODO Auto-generated destructor stub
 }

@@ -9,23 +9,23 @@
 #define DOUBLELINKEDLIST_H_
 
 namespace std {
-struct node {
+struct Node {
 	int value;
-	node *prev;
-	node *next;
+	Node *prev;
+	Node *next;
 };
 
 class DoubleLinkedList {
 private:
-	node *header, *trailer;
+	Node *header, *trailer;
 	int size = 0;
 bool isEmpty(){
 
 return size==0;
 
 }
-void AddBetween(int val,  node *predecessor,  node *sucessor);
-int Remove(node *Node);
+void AddBetween(int val,  Node *predecessor,  Node *sucessor);
+int Remove(Node *Node);
 public:
 DoubleLinkedList();
 int getSize();
@@ -35,6 +35,7 @@ int RemoveFirst();
 int RemoveLast();
 int getFirst();
 int getLast();
+bool search(int x);
 
 	virtual ~DoubleLinkedList();
 };

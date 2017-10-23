@@ -7,13 +7,15 @@
 
 #ifndef LINKEDLIST_H_
 #define LINKEDLIST_H_
+#include<Queue.h>
+#include<Stack.h>
 namespace std {
 struct node{
 	int value;
 	node *next;
 };
 
-class LinkedList {
+class LinkedList : public Queue, Stack {
 private:
 	node *head, *tail;
 	int Size = 0;
@@ -26,6 +28,14 @@ public:
 		int getsize();
 		int getFirst();
 		int getLast();
+		int size();
+		void enqueue(int i);
+		int dequeue();
+		void push(int i);
+		int top();
+		int pop();
+
+
 
 
 
