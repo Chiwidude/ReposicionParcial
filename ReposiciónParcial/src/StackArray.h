@@ -4,7 +4,7 @@
  *  Created on: Oct 21, 2017
  *      Author: FRAN
  */
-#include<Stack.cpp>
+#include<Stack.h>
 #ifndef STACKARRAY_H_
 #define STACKARRAY_H_
 

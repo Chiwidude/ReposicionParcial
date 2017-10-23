@@ -7,7 +7,7 @@
 
 #ifndef QUEUEARRAY_H_
 #define QUEUEARRAY_H_
-#include<Queue.cpp>
+#include<Queue.h>
 
 namespace std {
 

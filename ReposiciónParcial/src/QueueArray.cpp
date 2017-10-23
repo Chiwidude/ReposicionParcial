@@ -10,12 +10,12 @@
 namespace std {
 
 QueueArray::QueueArray() {
-data[capacity];
+
 arraylength = capacity;
 
 }
 QueueArray::QueueArray(int size) {
-data[size];
+
 arraylength= size;
 
 }

@@ -8,12 +8,10 @@
 #include "StackArray.h"
 
 namespace std {
-StackArray::StackArray(int size){
-	data[size];
-}
+
 
 StackArray::StackArray() {
- data[capacity];
+
 
 }
 
