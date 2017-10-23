@@ -7,6 +7,8 @@
  #include<iostream>
 #include<StackArray.h>
 #include<Problema2.h>
+#include<Problema3.h>
+#include<Problema4.h>
 using namespace std;
 
 StackArray s1;
